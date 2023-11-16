@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --primary: #0085ff;
+  --secondary: #69b4ff;
+  --white: #ffffff;
+  --off-white: #f5f5f5;
+  --green: #6cff8c;
+  --red: #ff7474;
+}
+
+.task-board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--off-white);
+  width: 30rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+  overflow: hidden;
+  box-shadow: 7px 12px 33.4px -5px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e9e9e9;
+}
+
+.task-board .header {
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--primary) 0%,
+    var(--secondary) 98.84%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.task-board .header form {
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+form #text-input {
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  width: 18rem;
+  border: none;
+  border-radius: 1.5rem;
+  outline: none;
+}
+
+form button {
+  font-weight: 600;
+  background-color: var(--white);
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  padding: 0.5rem 1.8rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--off-white);
+  transition: all 0.3s ease;
+}
+
+.task {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.task .to-do {
+  background-color: var(--white);
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+}
+
+.task .to-do .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.task .to-do .buttons button {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.task .to-do .buttons .complete {
+  background-color: var(--green);
+  transition: all 0.3s ease;
+}
+
+.task .to-do .buttons .complete:hover {
+  filter: brightness(0.9);
+}
+
+.task .to-do .buttons .delete {
+  background-color: var(--red);
+  transition: all 0.3s ease;
+}
+
+.task .to-do .buttons .delete:hover {
+  filter: brightness(0.9);
+}

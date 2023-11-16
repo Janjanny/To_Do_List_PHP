@@ -12,6 +12,7 @@ require_once "./includes/tasks_controller.inc.php";
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/styles/style.css">
   <title>To Do List</title>
 </head>
 
@@ -19,7 +20,7 @@ require_once "./includes/tasks_controller.inc.php";
   <div class="task-board">
     <div class="header">
       <form action="./includes/task.inc.php" method="post" autocomplete="off">
-        <input type="text" name="addTask" id="">
+        <input type="text" name="addTask" id="text-input" placeholder="What would you like to do ?">
         <button type="submit">Add</button>
       </form>
     </div>
