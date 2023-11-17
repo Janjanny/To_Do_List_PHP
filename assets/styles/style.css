@@ -88,10 +88,6 @@ form button:hover {
   gap: 20px;
 }
 
-.task .to-do.deleted {
-  display: none;
-}
-
 .task .to-do {
   background-color: var(--white);
   width: 100%;
@@ -103,6 +99,11 @@ form button:hover {
   padding: 1rem 1.5rem;
   border-radius: 20px;
 }
+
+/* .task .to-do.done {
+  text-decoration: line-through;
+  color: #999999;
+} */
 
 .task .to-do .buttons {
   display: flex;
