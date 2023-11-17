@@ -4,8 +4,13 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newTask"])) {
   $newTask = $_POST["newTask"];
 
+  if (empty($newTask)) {
+    header("Location: ../index.php");
+  }
+
   try {
     require_once "dbh.inc.php";
+
 
     // create a query to insert task in the database
     $query = "INSERT INTO tasks (task) VALUES (:newtask)";

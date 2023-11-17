@@ -100,10 +100,10 @@ form button:hover {
   border-radius: 20px;
 }
 
-/* .task .to-do.done {
+.task .to-do.done {
   text-decoration: line-through;
   color: #999999;
-} */
+}
 
 .task .to-do .buttons {
   display: flex;

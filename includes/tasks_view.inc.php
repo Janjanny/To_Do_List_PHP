@@ -3,7 +3,7 @@
 function showTasks(array $tasks)
 {
   foreach ($tasks as $task) {
-    echo "<div class='to-do done' id =" . $task['id'] . ">
+    echo "<div class='to-do' id =" . $task['id'] . ">
         <p>" . $task['task'] .  "</p>
         <div class='buttons'>
         <button class='complete' id =" . $task['id'] . "><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'><path d='m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z'></path></svg></button>

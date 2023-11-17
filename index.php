@@ -33,7 +33,7 @@ require_once "./includes/tasks_controller.inc.php";
 
       ?>
 
-      <div class='to-do done'>
+      <!-- <div class='to-do'>
         <p>asdsssssa</p>
         <div class='buttons'>
           <button class='complete' id='1'><svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgba(0, 0, 0, 1);'>
@@ -44,7 +44,7 @@ require_once "./includes/tasks_controller.inc.php";
               <path d='M9 10h2v8H9zm4 0h2v8h-2z'></path>
             </svg></button>
         </div>
-      </div>
+      </div> -->
 
 
     </div>
@@ -90,13 +90,25 @@ require_once "./includes/tasks_controller.inc.php";
         const $this = $(this);
         const id = $(this).attr('id');
 
-        $.post("./includes/complete_task.inc.php", {
-            id: id,
+        // send an ajax request
+        $.ajax({
+          type: "POST",
+          url: "./includes/complete_task.inc.php",
+          data: {
+            id: id
           },
-          (data) => {
-            alert(data);
+          success: function(data) {
+            // add a class
+            if (data == 'success') {
+              $this.closest(".to-do").addClass("done");
+            } else {
+              alert("Something went wrong")
+            }
+          },
+          error: function(error) {
+            alert("AJAX request failed", error);
           }
-        )
+        })
       })
     });
   </script>
