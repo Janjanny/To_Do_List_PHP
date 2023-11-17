@@ -138,3 +138,7 @@ form button:hover {
 .task .to-do .buttons .delete:hover {
   filter: brightness(0.9);
 }
+
+.task .to-do .task-date {
+  color: #999999;
+}

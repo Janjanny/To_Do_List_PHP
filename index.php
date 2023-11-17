@@ -55,6 +55,23 @@ require_once "./includes/tasks_controller.inc.php";
   <script>
     $(document).ready(function() {
 
+      // function for form
+      $('#addTaskForm').submit(function(e) {
+        // // prevent default form submission
+        // e.preventDefault();
+
+        // get the value of the input
+        const newTaskValue = $('#text-input').val();
+
+        // check if the value is empty
+        // trim() removes whitespace from both sides of a string:
+        if (!newTaskValue.trim()) {
+          alert("Task cannot be empty!");
+        } else {
+          this.submit
+        }
+      })
+
       // for delete function
       $(".delete").click(function() {
         const $this = $(this);
@@ -101,6 +118,9 @@ require_once "./includes/tasks_controller.inc.php";
             // add a class
             if (data == 'success') {
               $this.closest(".to-do").addClass("done");
+              $this.fadeOut(500, function() {
+                $(this).remove;
+              })
             } else {
               alert("Something went wrong")
             }
