@@ -1,8 +1,8 @@
 <?php
 
 // check if there is a data submitted 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $newTask = $_POST["addTask"];
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["newTask"])) {
+  $newTask = $_POST["newTask"];
 
   try {
     require_once "dbh.inc.php";
@@ -17,6 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':newtask', $newTask);
 
     $stmt->execute();
+
+
     // manually close the statement
     $stmt = null;
 

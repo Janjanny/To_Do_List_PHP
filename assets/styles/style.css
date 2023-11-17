@@ -88,6 +88,10 @@ form button:hover {
   gap: 20px;
 }
 
+.task .to-do.deleted {
+  display: none;
+}
+
 .task .to-do {
   background-color: var(--white);
   width: 100%;

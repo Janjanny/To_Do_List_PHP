@@ -1,0 +1,8 @@
+// $.post("./includes/remove_task.inc.php", {
+        //     id: id,
+
+        //   },
+        //   (data) => {
+        //     $this.parent().addClass("deleted");
+        //   }
+        // )

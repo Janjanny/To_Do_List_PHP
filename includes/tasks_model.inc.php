@@ -3,7 +3,7 @@
 function fetchTasks(object $pdo)
 {
 
-  $query = "SELECT task, date_created, is_done FROM tasks";
+  $query = "SELECT task, date_created, is_done, id FROM tasks";
   $stmt = $pdo->prepare($query);
   $stmt->execute();
 
